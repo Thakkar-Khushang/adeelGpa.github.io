@@ -32,7 +32,7 @@ function calculate(){
   }
   outOfTen=parseInt(total/numSubs);
   var gpa;
-  switch(outOfTen){
+  switch(parseInt((outOfTen/10))*10){
     case 100:
     case 90:
       gpa='S';
