@@ -70,7 +70,7 @@ function calculate(){
   if (flag==0){
     gpa='One or more of the values is greater than 100';
   }
-
+  console.log(gpa);
   var final=document.createElement("P");
   final.innerText=gpa;
   final.id='output';
