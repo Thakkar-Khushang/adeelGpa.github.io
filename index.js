@@ -71,7 +71,7 @@ function calculate(){
   var final=document.createElement("P");
   final.innerText=gpa;
   final.id='output';
-  finalMark.appendChild(final+"testing");
+  finalMark.appendChild(final);
   total=0;
 
 
