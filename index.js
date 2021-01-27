@@ -26,6 +26,11 @@ function createField(){
 
 }
 function calculate(){
+  
+  // deleting the previously displyed grade
+  var final=document.getElementById('output')
+  finalMark.removeChild(final);
+  
   for(var i=0;i<numSubs;i++){
     var texts=document.getElementById(i);
     total+=parseFloat(texts.value);
@@ -62,6 +67,7 @@ function calculate(){
 
   var final=document.createElement("P");
   final.innerText=gpa;
+  final.id='output';
   finalMark.appendChild(final);
   total=0;
 
