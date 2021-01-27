@@ -31,6 +31,9 @@ function calculate(){
   var final=document.getElementById('output')
   finalMark.removeChild(final);
   
+  //flag variable to make sure that all values is less than 100
+  var flag=-1;
+  
   for(var i=0;i<numSubs;i++){
     var texts=document.getElementById(i);
     total+=parseFloat(texts.value);
@@ -64,8 +67,8 @@ function calculate(){
       gpa='N';
       break;
   }
-  if (total>100){
-    gpa='S';
+  if (flag==0){
+    gpa='One or more of the values is greater than 100';
   }
 
   var final=document.createElement("P");
