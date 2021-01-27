@@ -37,7 +37,7 @@ function calculate(){
   for(var i=0;i<numSubs;i++){
     var texts=document.getElementById(i);
     total+=parseFloat(texts.value);
-    if(parseFloat(texts.value)>100){
+    if(parseFloat(texts.value)>100 || parseFloat(texts.value)<0 ){
       flag=0;
     }
   }
@@ -71,7 +71,7 @@ function calculate(){
       break;
   }
   if (flag==0){
-    gpa='One or more of the values is greater than 100';
+    gpa='One or more of the values is invalid';
   }
   console.log(gpa);
   var final=document.createElement("P");
