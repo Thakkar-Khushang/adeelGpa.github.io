@@ -37,6 +37,9 @@ function calculate(){
   for(var i=0;i<numSubs;i++){
     var texts=document.getElementById(i);
     total+=parseFloat(texts.value);
+    if(parseFloat(texts.value)>100){
+      flag=0;
+    }
   }
   outOfTen=parseInt(total/numSubs);
   var gpa;
