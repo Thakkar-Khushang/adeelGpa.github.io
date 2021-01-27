@@ -64,6 +64,9 @@ function calculate(){
       gpa='N';
       break;
   }
+  if (total>100){
+    gpa='S'
+  }
 
   var final=document.createElement("P");
   final.innerText=gpa;
